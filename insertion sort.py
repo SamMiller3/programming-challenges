@@ -1,4 +1,6 @@
-#bubblesort? big-o-noation algorithm, created 28/03/2021 (ascending)
+#I believe this is insertion big-o-noation algorithm, created 28/03/2021 (ascending)
+#it has some bugs, eg if you input 123987123 it will just return 123987123 but it works with lots of things.
+#the development was quick but very interesting, I inputed 987654321 and it would return 18273645.
 list = list(input("input a base 10 array of integers to be sorted into ascending order"))
 j = 0
 while j < len(list)/3:

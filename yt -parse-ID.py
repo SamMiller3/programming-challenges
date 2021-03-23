@@ -1,3 +1,4 @@
+#my first ever python script
 inpt = input("")
 parse = ""
 #input format: https://www.youtube.com/test (20) or https://youtu.be/ (12)

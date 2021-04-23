@@ -1,11 +1,14 @@
 #Insertion Sort Revised, 23/04/2021
 #I made a buggy version of insertion sort a month and a half ago so
 #I decided to start from scratch and code a new one!
+#I also made this one a lot quicker, this took about an hour where as the other one took a couple of hours.
+
 #example input:
 #248 43 8 2
 #example output:
 #2 8 43 248
-pr = input("print proccess (T,F)?")
+
+pr = input("print process (T,F)?")
 def sort(arr):
     i = 0
     while arr[0] > arr[1]:

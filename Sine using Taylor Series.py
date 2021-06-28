@@ -1,4 +1,4 @@
-#Calculating sine using Taylor series
+#Calculating sine using Taylor series, 28/06/2021
 import math
 theta = int(input("input theta"))
 answer = theta

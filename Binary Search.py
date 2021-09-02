@@ -9,10 +9,10 @@ nums.sort
 midpoint = int(len(nums) / 2)
 while True:
     nums2 = nums[midpoint:int(len(nums))]
-    if num in nums2:
-        nums = nums2
-    else:
+    if num < nums2[0] and num < nums2[len(nums2)-1]:
         nums = nums[0:midpoint]
+    else:
+        nums = nums2
     midpoint = int(len(nums) / 2)
     if len(nums) <= 3:
         break

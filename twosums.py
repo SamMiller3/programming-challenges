@@ -1,17 +1,35 @@
-#twosum question from leetcode.com
-#input an array of numbers then a target then the program will output the index of which 2 numbers add up to make the target (presuming there is only 1)
-#note this example is heavily unoptimized, you can't enter 2 digit numbers, if the numbers are in a strange order it wont be able to find the answer
-i = 0
-c = 0
-c1 = 1
-nums = list(input(""))
-target = int(input(""))
-while i<len(nums)-1:
-    if int(nums[c])+int(nums[c1]) == target:
-        print("[" + str(c) + "," + str(c1) + "]")
+#twoSum updated, 20/03/2022, original made 19/03/2021
+#Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target
+#--VARIABLES:--
+
+#prompt user input for array of nums and target
+nums = input("input arr of nums")
+target = int(input("input target"))
+#convert string of nums to list
+nums=nums.split()
+#loop breaker variable
+d=0
+#list containing index of nums that add up to make target
+pSum = []
+
+#--MAIN CODE:--
+
+#loop thru nums
+for i in range(len(nums)):
+    #loop thru nums each iteration of first loop
+    for j in range(len(nums)):
+        #if i and j add up to equal target then append them
+        #to pSum, break out of loops and output
+        if int(nums[i])+int(nums[j])==target and i!=j:
+            #append i and j to pSum
+            pSum.append(i)
+            pSum.append(j)
+            #set loopbreaker variable to 1
+            d=1
+            break
+    #break out of all loops
+    if d==1:
         break
-    else:
-        c+=1
-        c1+=1
-        i+=1
-print("end")
+#output pSum
+print(pSum)
+               

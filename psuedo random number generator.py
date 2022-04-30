@@ -15,7 +15,7 @@ def genRanNum(chars):
     out=str(seed**2).zfill(8)[2:6]
     #return requested number of random characters
     return(int(out[0:chars]))
-#variables
+#---variables:---
 lib = ctypes.windll.kernel32
 t = lib.GetTickCount64()
 t = int(str(t)[:-3])

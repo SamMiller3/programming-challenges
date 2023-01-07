@@ -20,5 +20,5 @@ def trap(height):
             trapped+=height[barrier]-height[i+1]
             i+=1
         i+=1
-    return(k)
+    return(trapped)
 print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))

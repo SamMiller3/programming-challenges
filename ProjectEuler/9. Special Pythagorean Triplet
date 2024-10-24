@@ -1,0 +1,19 @@
+#23/10/2024
+#Project Euler - Special Pythagorean Triplet
+
+import math
+
+def find_special_triplet():
+    # Iterate through possible values of 'a' and 'b'
+    for a in range(1, 999):
+        for b in range(a, 999):
+            # Calculate 'c' as the hypotenuse
+            c = math.sqrt(a**2 + b**2)
+            
+            # Check if 'c' is an integer and the sum of a, b, c equals 1000
+            if c.is_integer() and (a + b + int(c) == 1000):
+                # Return the product of a, b, and c
+                return int(a * b * c)
+
+# Output the result of the special Pythagorean triplet
+print(find_special_triplet())

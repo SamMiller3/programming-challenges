@@ -1,5 +1,5 @@
 #24/10/2024
-#Project Euler - Highly Divisible Triangular Number
+#Project Euler - Large Sum
 import numpy as np
 
 numbers = np.array([

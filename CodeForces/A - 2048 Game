@@ -1,0 +1,55 @@
+# May/30/2024 
+# Problem description: https://codeforces.com/contest/1221/problem/A
+# You are playing a variation of game 2048. Initially you have a multiset `s`
+# of `n` integers. Every integer in this multiset is a power of two.
+#
+# You may perform any number (possibly, zero) operations with this multiset.
+#
+# During each operation you choose two equal integers from `s`, remove them from `s`
+# and insert the number equal to their sum into `s`.
+#
+# You win if the number 2048 belongs to your multiset. For example, if `s={1024,512,512,4}`
+# you can win as follows: choose 512 and 512, your multiset turns into {1024,1024,4}.
+# Then choose 1024 and 1024, your multiset turns into {2048,4} and you win.
+#
+# You have to determine if you can win this game.
+#
+# You have to answer `q` independent queries.
+#
+# Input:
+# The first line contains one integer `q` (1 ≤ q ≤ 100) – the number of queries.
+# The first line of each query contains one integer `n` (1 ≤ n ≤ 100) — the number of elements in multiset.
+# The second line of each query contains `n` integers `s1, s2, …, sn` (1 ≤ si ≤ 2^29) — the description of the multiset.
+# It is guaranteed that all elements of the multiset are powers of two.
+#
+# Output:
+# For each query print "YES" if it is possible to obtain the number 2048 in your multiset,
+# and "NO" otherwise.
+
+def main():
+    q = int(input())  # Read number of queries
+    for _ in range(q):
+        n = int(input())  # Number of elements in the multiset
+        blocks = list(map(int, input().split()))  # Read the multiset
+        count = {2**i: 0 for i in range(11)}  # We care about powers of two from 2^0 to 2^11 (up to 2048)
+
+        # Count occurrences of each power of two
+        for block in blocks:
+            count[block] += 1
+
+        # Try to combine blocks starting from the smallest power of two
+        for i in range(11):  # From 2^0 to 2^10 (which covers up to 1024)
+            if count[2**i] >= 2:
+                # Combine blocks into the next higher power of two
+                count[2**(i+1)] += count[2**i] // 2
+                count[2**i] %= 2
+
+        # Check if we can make 2048
+        if count[2048] > 0:
+            print("YES")
+        else:
+            print("NO")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,3 +1,4 @@
+#16/07/2021 github screenscraper for my website
 import urllib.request
 print(len('h2 class="f4 text-normal mb-2">'))
 website = urllib.request.urlopen('https://github.com/IronHead43')

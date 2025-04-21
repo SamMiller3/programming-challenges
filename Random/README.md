@@ -1,1 +1,1 @@
-Random stuff I have made
+Random smaller projects or programming challenges I have done.

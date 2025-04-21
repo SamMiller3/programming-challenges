@@ -1,1 +1,1 @@
-Leetcode problems I have solved
+LeetCode solutions I have written. Some older or less polished solutions have been included to show how my coding style, efficiency, and problem-solving ability have evolved over time. I started writing solutions in 2021.

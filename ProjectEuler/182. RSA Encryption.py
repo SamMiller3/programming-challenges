@@ -18,7 +18,7 @@ for i in range(1, TOTIENT):
 # Calculate number of concealed messages for each e using Chinese Remainder Theorem.
 # (I discovered this method through research; originally I used dynamic programming)
 # The Chinese Remainder Theorem approach significantly optimised the solution.
-min_concealed = (p * q)  # Initialize with a high number
+min_concealed = (p * q)  # Initialise with a high number
 number_of_min_concealed = 0
 
 # Iterate over e values to find the least concealed messages
@@ -27,7 +27,7 @@ for e in e_values:
     if num_concealed == min_concealed:
         number_of_min_concealed += e  # Add e to the sum if it matches the current minimum
     if num_concealed < min_concealed:
-        number_of_min_concealed = e  # Reset the sum and update the minimum concealed messages
+        number_of_min_concealed = e  # Reset the sum and update the minimum concealed messages if new minimum is found
         min_concealed = num_concealed
 
 # Output the sum of values of e that result in the least concealed messages

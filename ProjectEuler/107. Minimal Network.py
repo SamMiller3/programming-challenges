@@ -22,6 +22,7 @@ for i in range(1,len(distance_matrix)):
 print(weight)
 
 
+# apply Prims to find MST
 # look along the rows, and delete columns (by replacing with 999999)
 current_row=0 # start at first row
 MST_weight=0

@@ -1,4 +1,4 @@
-# Problem 107. Minimal Network
+# Project Euler Problem 107. Minimal Network
 # 27/06/2025
 
 distance_matrix=[] # process text file and convert to distance matrix

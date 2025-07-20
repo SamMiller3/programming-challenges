@@ -1,4 +1,5 @@
-""" 29/5/2024 (A) Polycarp and Sums of Subsequences from CodeForces
+#1618A. Polycarp and Sums of Subsequences from CodeForces
+#29/5/2024
 # https://codeforces.com/contest/1618/problem/A
 
 Polycarp had an array `a` of 3 positive integers. He calculated the sums of all 

@@ -1,0 +1,23 @@
+
+// LeetCode 003. Longest Substring Without Repeating Characters
+// 30/11/2025
+use std::collections::HashSet;
+use std::cmp;
+impl Solution {
+    pub fn length_of_longest_substring(s: String) -> i32 {
+        let mut longest: usize = 0;
+        let mut left: usize = 0;
+        let mut substring = String::new();
+
+        for (right, character) in s.chars().enumerate() {
+            while substring.contains(character) {
+                substring.drain(..1);
+                left += 1;
+            }
+            substring.push(character);
+            longest = cmp::max(longest, right - left + 1);
+
+        }
+        longest as i32
+    }
+}
